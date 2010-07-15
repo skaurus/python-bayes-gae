@@ -1,0 +1,34 @@
+﻿application: python-bayes-gae
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  script: cgi-bin/home.py
+
+- url: /index\.html
+  script: cgi-bin/home.py
+
+- url: /register_spam
+  script: cgi-bin/register_spam.py
+
+- url: /register_organic
+  script: cgi-bin/register_organic.py
+
+- url: /is_spam
+  script: cgi-bin/is_spam.py
+
+#- url: /stylesheets
+#  static_dir: stylesheets
+
+#- url: /(.*\.(gif|png|jpg))
+#  static_files: static/\1
+#  upload: static/(.*\.(gif|png|jpg))
+
+#- url: /admin/.*
+#  script: admin.py
+#  login: admin
+
+#- url: /.*
+#  script: not_found.py
