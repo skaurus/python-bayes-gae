@@ -1,0 +1,11 @@
+﻿Simple example of Google App Engine based, pure-python, naive bayes spam filter.
+
+English stemmer is taken from http://pypi.python.org/pypi/stemming/1.0 and may
+be outdated at time of viewing this repo.
+
+Usage:
+import lib/PPStemmer
+print PPStemmer.stem(unicode_word)
+
+
+skaurus
