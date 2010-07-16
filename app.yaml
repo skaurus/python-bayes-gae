@@ -1,23 +1,20 @@
-﻿application: python-bayes-gae
-version: 1
+﻿application: bayes-filter-example
+version: 2
 runtime: python
 api_version: 1
 
 handlers:
 - url: /
-  script: cgi-bin/home.py
+  script: /cgi-bin/home.py
 
 - url: /index\.html
-  script: cgi-bin/home.py
+  script: /cgi-bin/home.py
 
-- url: /register_spam
-  script: cgi-bin/register_spam.py
-
-- url: /register_organic
-  script: cgi-bin/register_organic.py
+- url: /register_(spam|organic)
+  script: /cgi-bin/register_\1.py
 
 - url: /is_spam
-  script: cgi-bin/is_spam.py
+  script: /cgi-bin/is_spam.py
 
 #- url: /stylesheets
 #  static_dir: stylesheets
