@@ -1,4 +1,5 @@
-﻿# register.py
+# register.py
+# coding: utf-8
 
 import sys
 sys.path.insert(1, '../lib')
@@ -16,7 +17,7 @@ if "body" not in form:
     sys.exit(0)
 
 
-body = form.getfirst("body")
-mark_as_spam(body)
+body = unicode(form.getfirst("body"), "utf-8")
+c = mark_as_spam(body)
 
-http_answer("OK")
+http_answer("OK: " + str(c))

@@ -1,4 +1,5 @@
-﻿# common functions
+# common functions
+# coding: utf-8
 
 def http_answer(html = ''):
     print """Content-Type: text/html; charset=utf-8

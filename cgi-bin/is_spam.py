@@ -1,4 +1,5 @@
-﻿# is_spam.py
+# is_spam.py
+# coding: utf-8
 
 import sys
 sys.path.insert(1, '../lib')
@@ -13,10 +14,10 @@ form = cgi.FieldStorage()
 
 if "body" not in form:
     http_answer("ERROR: body must be provided in cgi parameter 'body'")
-    return
+    sys.exit(0)
 
 
-body = form.getfirst("body")
-result = "SPAM" if is_spam(body) else "NOT SPAM"
+body = unicode(form.getfirst("body"), "utf-8")
+result = ("SPAM" if is_spam(body) else "NOT SPAM")
 
 http_answer(result)

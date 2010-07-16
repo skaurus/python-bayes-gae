@@ -1,4 +1,5 @@
-﻿# russian && english pure-Python stemming module (snowball algorithm)
+# russian && english pure-Python stemming module (snowball algorithm)
+# coding: utf-8
 
 import re
 from stemming import porter2 # see http://pypi.python.org/pypi/stemming/1.0
